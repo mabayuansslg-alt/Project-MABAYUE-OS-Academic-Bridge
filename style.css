@@ -1,10 +1,8 @@
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --bg-main: #f8fafc;
-  --card-bg: #ffffff;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
+  --primary: #0f172a;
+  --primary-hover: #1e293b;
+  --text-main: #000000;
+  --text-muted: #000000;
   --border-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -22,12 +20,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--text-main);
+  color: #000000;
   line-height: 1.5;
   min-height: 100vh;
 }
 
-/* Fully Transparent Header */
+/* Header Design */
 .site-header {
   background: transparent !important;
   border-bottom: none !important;
@@ -40,35 +38,46 @@ body {
   gap: 12px;
 }
 
+/* Tinanggal ang asul na background at ginawang dark sleek badge */
 .brand-mark {
-  background: var(--primary);
-  color: white;
+  background: #0f172a !important;
+  color: #ffffff !important;
   width: 36px;
   height: 36px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .brand-name {
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 900;
+  color: #000000 !important;
   letter-spacing: 0.5px;
 }
 
+/* Ginawang solid black ang 'Academic Bridge' sa header */
 .brand-subtitle {
   font-size: 12px;
-  color: var(--text-muted);
+  color: #000000 !important;
+  font-weight: 700;
 }
 
+/* Page Layout */
 .app {
   max-width: 800px;
   margin: 0 auto;
   padding: 32px 16px;
   animation: pageFadeIn 0.3s ease-out forwards;
+}
+
+/* Palitan ang lahat ng p, span, h1, h2, h3 sa loob ng app ng black */
+.app p, .app span, .app h1, .app h2, .app h3, .app div {
+  color: #000000 !important;
+  font-weight: 600;
 }
 
 @keyframes pageFadeIn {
@@ -82,11 +91,12 @@ body {
   }
 }
 
+/* Cards Design */
 .choice-card, .subject-card, .resource-card {
-  background: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 16px;
@@ -97,7 +107,7 @@ body {
 
 .choice-card:hover, .subject-card:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -106,12 +116,12 @@ body {
 }
 
 button, .btn {
-  background: var(--primary);
-  color: white;
+  background: #0284c7;
+  color: #ffffff !important;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease;
 }
@@ -120,15 +130,14 @@ button:active, .btn:active {
   transform: scale(0.95);
 }
 
-/* Fully Transparent Footer */
+/* Footer Design */
 .site-footer {
   text-align: center;
   padding: 24px;
   font-size: 13px;
-  color: var(--text-main);
-  font-weight: 600;
+  color: #000000 !important;
+  font-weight: 800;
   background: transparent !important;
   border-top: none !important;
   margin-top: 40px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
