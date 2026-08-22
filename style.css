@@ -1,0 +1,479 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --gray-dark: #555555;
+  --gray: #777777;
+  --gray-light: #d9d9d9;
+  --gray-lighter: #eeeeee;
+  --gray-background: #f7f7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Ginawang 0.4 na lang ang kapal ng puti para mas tingkad at klaro ang LOGO.png */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('LOGO.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f1f5f9;
+
+  color: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  border-bottom: 1px solid var(--gray-lighter);
+
+  padding: 18px 24px;
+}
+
+.brand {
+  max-width: 980px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+
+  border: 2px solid var(--black);
+
+  display: grid;
+  place-items: center;
+
+  font-weight: 700;
+}
+
+.brand-name {
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+  color: var(--black);
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.app {
+  max-width: 980px;
+
+  margin: auto;
+
+  padding: 64px 24px 80px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 760px;
+
+  margin-bottom: 54px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  color: var(--gray);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 18px;
+
+  font-size: clamp(42px, 8vw, 76px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.hero p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--gray-dark);
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+  margin: 0 0 18px;
+
+  font-size: 14px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   GRADE BUTTONS
+========================= */
+
+.choice-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.choice-card {
+  width: 100%;
+
+  text-align: left;
+
+  border: 1px solid var(--gray-light);
+
+  background: var(--white);
+
+  padding: 24px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.choice-card:hover,
+.choice-card:focus-visible {
+  border-color: var(--black);
+
+  background: var(--gray-background);
+
+  outline: none;
+}
+
+.choice-card .number {
+  color: var(--gray);
+
+  font-size: 12px;
+
+  margin-bottom: 24px;
+}
+
+.choice-card h2 {
+  margin: 0;
+
+  font-size: 24px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+  border: 0;
+
+  background: transparent;
+
+  padding: 0;
+
+  margin-bottom: 34px;
+
+  color: var(--gray-dark);
+
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+.back-button:hover {
+  color: var(--green);
+}
+
+
+/* =========================
+   PAGE HEADINGS
+========================= */
+
+.page-heading {
+  margin-bottom: 36px;
+}
+
+.page-heading h1 {
+  font-size: clamp(38px, 7vw, 64px);
+
+  margin-bottom: 10px;
+}
+
+.page-heading p {
+  margin: 0;
+
+  color: var(--gold);
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subject-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.subject-card {
+  width: 100%;
+
+  text-align: left;
+
+  border: 1px solid var(--gray-light);
+
+  background: var(--white);
+
+  padding: 24px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.subject-card:hover,
+.subject-card:focus-visible {
+  border-color: var(--black);
+
+  background: url('LOGO.PNG');
+
+  outline: none;
+}
+
+.subject-card h3 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.subject-card p {
+  margin: 8px 0 0;
+
+  color: var(--gray);
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   EXAMINATION COVERAGE
+========================= */
+
+.coverage {
+  max-width: 760px;
+
+  margin-bottom: 48px;
+}
+
+.term-label {
+  padding-bottom: 12px;
+
+  border-bottom: 2px solid var(--black);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.topic-list {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.topic {
+  display: grid;
+
+  grid-template-columns: 42px 1fr;
+
+  gap: 14px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid var(--gray-lighter);
+}
+
+.topic-number {
+  color: var(--gray);
+}
+
+.topic-title {
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.placeholder {
+  color: var(--gray);
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  max-width: 980px;
+
+  margin: auto;
+
+  padding: 24px;
+
+  border-top: 1px solid var(--gray-lighter);
+
+  color: var(--gray);
+
+  font-size: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+  .site-header {
+    padding: 16px 18px;
+  }
+
+  .app {
+    padding: 48px 18px 64px;
+  }
+
+  .choice-grid,
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-card,
+  .subject-card {
+    padding: 20px;
+  }
+
+  .hero {
+    margin-bottom: 42px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .site-footer {
+    padding: 20px 18px;
+
+    flex-direction: column;
+  }
+
+}
+
+/* ===================================================
+   HOVER ANIMATIONS & SMOOTH SHADOWS
+   =================================================== */
+
+/* 1. Cards - Smooth Lift at Glow Effect */
+.card, .choice-card, .subject-card, .resource-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover, .choice-card:hover, .subject-card:hover, .resource-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.18), 
+              0 8px 16px -4px rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+}
+
+/* 2. Buttons - Bounce Effect & Ripple Feel */
+button, .btn {
+  transition: transform 0.2s ease, 
+              box-shadow 0.2s ease, 
+              background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
+}
+
+button:active, .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
